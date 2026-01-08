@@ -1,0 +1,5 @@
+{
+  "name": "Neighborhood Community Help Portal",
+  "description": "A web application where residents can post help requests and helpers can view and accept nearby requests.",
+  "requestFramePermissions": []
+}

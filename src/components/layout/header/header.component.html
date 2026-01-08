@@ -1,0 +1,41 @@
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a routerLink="/" class="flex items-center space-x-2 text-2xl font-bold text-teal-600 hover:text-teal-700 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5V2m0 20v-2.5m7.5-10H22m-20 0h2.5M5.636 5.636l1.768 1.768m11.314-1.768l-1.768 1.768m0 9.546l1.768 1.768m-14.85 0l1.768-1.768" />
+      </svg>
+      <span>CommunityHelp</span>
+    </a>
+    
+    <!-- Mobile menu button -->
+    <div class="md:hidden">
+      <button (click)="toggleMenu()" class="text-gray-600 hover:text-teal-600 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          @if (!isMenuOpen()) {
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          } @else {
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          }
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-6">
+      <a routerLink="/" routerLinkActive="text-teal-600" [routerLinkActiveOptions]="{exact: true}" class="text-gray-600 hover:text-teal-600 transition font-medium">Home</a>
+      <a routerLink="/requests" routerLinkActive="text-teal-600" class="text-gray-600 hover:text-teal-600 transition font-medium">Help Requests</a>
+      <a routerLink="/register" class="text-gray-600 hover:text-teal-600 transition font-medium">Login / Register</a>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+  @if (isMenuOpen()) {
+    <div class="md:hidden bg-white border-t">
+      <a routerLink="/" (click)="toggleMenu()" routerLinkActive="text-teal-600 bg-teal-50" [routerLinkActiveOptions]="{exact: true}" class="block py-3 px-6 text-gray-600 hover:bg-teal-50 hover:text-teal-600 transition font-medium">Home</a>
+      <a routerLink="/requests" (click)="toggleMenu()" routerLinkActive="text-teal-600 bg-teal-50" class="block py-3 px-6 text-gray-600 hover:bg-teal-50 hover:text-teal-600 transition font-medium">Help Requests</a>
+      <a routerLink="/register" (click)="toggleMenu()" routerLinkActive="text-teal-600 bg-teal-50" class="block py-3 px-6 text-gray-600 hover:bg-teal-50 hover:text-teal-600 transition font-medium">Login / Register</a>
+    </div>
+  }
+</header>
