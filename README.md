@@ -1,20 +1,43 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+🏘️Neighborhood Community Help Portal
 
-# Run and deploy your AI Studio app
+📌 Overview
 
-This contains everything you need to run your app locally.
+The Neighborhood Community Help Portal is a web application that helps community members post and respond to local help requests. It encourages collaboration and mutual support within neighborhoods.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1oPVqQSojapuxnWG199yykeoklFmvDnxK
+🛠️ Tech Stack
 
-## Run Locally
+Frontend: Angular, HTML, CSS, TypeScript
+Backend: Node.js, Express.js
+Database: MySQL (Localhost)
 
-**Prerequisites:**  Node.js
+🗄️ Database Workflow
 
+User data is collected through the frontend and sent to the backend using REST APIs.
+The backend performs CRUD operations on a MySQL database containing tables such as users, help_requests, and responses, and sends results back to the frontend.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+⚙️ Features
+
+User registration and login
+Post and view help requests
+Update request status
+Secure backend–database interaction
+
+🚀 How to Run the Project Locally
+
+1️⃣ Clone the Repository
+2️⃣ Frontend Setup
+cd frontend
+npm install
+ng serve
+3️⃣ Backend Setup
+cd backend
+npm install
+node server.js
+4️⃣ Database Setup
+Install MySQL
+Create database and tables using MySQL Workbench
+Update database credentials in backend configuration
+
+📄 License
+
+Academic project
